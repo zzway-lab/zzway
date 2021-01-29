@@ -1,5 +1,5 @@
 import sys
-sys.path.append('../')
+sys.path.append("F:\python editing tool\new_lesson")
 print(sys.path)
 
 from new_lesson import ui_automatic_data
