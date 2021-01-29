@@ -56,7 +56,9 @@ def Ui_automatic_search(driver,website,username,password):
     time.sleep(5)
     Ui_automatic_login(driver,username,password)
     #driver.switch_to.frame(iframe_id) #用子页面,因iframe_id是变动的，故不能直接用它定位
+    driver.implicitly_wait(10)
     driver.find_element_by_xpath("//span[text()='零售出库']").click()
+    driver.implicitly_wait(10)        
     li_id = driver.find_element_by_xpath("//div[text()='零售出库']/..").get_attribute("id") #或许id属性
     iframe_id = li_id + "-frame"
     driver.switch_to.frame(driver.find_element_by_xpath("//iframe[@id='%s']"%(iframe_id)))
