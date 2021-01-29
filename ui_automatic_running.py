@@ -1,3 +1,7 @@
+import sys
+sys.path.append('../')
+print(sys.path)
+
 from new_lesson import ui_automatic_data
 from new_lesson import ui_automatic_method
 from selenium import webdriver
